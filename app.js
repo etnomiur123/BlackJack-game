@@ -1,6 +1,4 @@
 const elements = {
-  player1: document.querySelector(".player1"),
-  player2: document.querySelector(".player2"),
   score1: document.querySelector(".score-1"),
   score2: document.querySelector(".score-2"),
   button1: document.querySelector(".button-1"),
@@ -53,16 +51,51 @@ const finish = (player) => {
   changeTurn();
 };
 
+const checkStop = () => {
+    if(player1.stop) changeTurn();
+    if(player2.stop) changeTurn();
+}
+
 const checkWinner = () => {
   //check player1
-  if (player1.score === 21) {setTimeout(() => {alert("Player 1 Wins!")}, 1000); return } ;
-  if (player1.score > 21) {setTimeout(() => {alert("Player 2 Wins!")}, 1000); return };
-  if (player2.stop && player1.score > player2.score) {setTimeout(() => {alert("Player 1 Wins!")}, 1000); return };
+  if (player1.score === 21) {
+    setTimeout(() => {
+      alert("Player 1 Wins!");
+    }, 500);
+    return;
+  }
+  if (player1.score > 21) {
+    setTimeout(() => {
+      alert("Player 2 Wins!");
+    }, 500);
+    return;
+  }
+  if (player2.stop && player1.score > player2.score) {
+    setTimeout(() => {
+      alert("Player 1 Wins!");
+    }, 500);
+    return;
+  }
 
   //check player2
-  if (player2.score === 21) {setTimeout(() => {alert("Player 2 Wins!")}, 1000); return };
-  if (player2.score > 21) {setTimeout(() => {alert("Player 1 Wins!")}, 1000); return };
-  if (player1.stop && player2.score > player1.score) {setTimeout(() => {alert("Player 2 Wins!")}, 1000); return };
+  if (player2.score === 21) {
+    setTimeout(() => {
+      alert("Player 2 Wins!");
+    }, 500);
+    return;
+  }
+  if (player2.score > 21) {
+    setTimeout(() => {
+      alert("Player 1 Wins!");
+    }, 500);
+    return;
+  }
+  if (player1.stop && player2.score > player1.score) {
+    setTimeout(() => {
+      alert("Player 2 Wins!");
+    }, 500);
+    return;
+  }
 
 };
 
@@ -70,12 +103,13 @@ const checkWinner = () => {
 
 elements.button1.addEventListener("click", () => {
   if (player1.active && player1.stop === false) {
-    const points = Math.floor(Math.random() * 11);
+    const points = Math.floor(Math.random() * 10) + 1;
     player1.score += points;
     elements.score1.innerHTML = player1.score;
     checkWinner();
+    checkStop()
     changeTurn();
-  }
+  } 
 });
 
 elements.next1.addEventListener("click", () => {
@@ -87,10 +121,11 @@ elements.next1.addEventListener("click", () => {
 
 elements.button2.addEventListener("click", () => {
   if (player2.active && player2.stop === false) {
-    const points = Math.floor(Math.random() * 11);
+    const points = Math.floor(Math.random() * 10) + 1;
     player2.score += points;
     elements.score2.innerHTML = player2.score;
     checkWinner();
+    checkStop()
     changeTurn();
   }
 });
