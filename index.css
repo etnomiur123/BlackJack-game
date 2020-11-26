@@ -1,45 +1,92 @@
 .contain {
-    height: 100vh;
-    width: 100%;
-    display:flex;
-    align-items: center;
-    justify-content: space-around;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .row {
-    width: 100%;
-    display: flex;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .flex {
-    display: flex;
-    flex-direction: column;
-    height: 5rem;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  height: 5rem;
+  justify-content: space-between;
 }
 
-.player1,
-.player2 {
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    text-align: center;
+.player {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background-color: rgba(100, 100, 100, 0.5);
+  color: white;
 }
 
 .active {
-    opacity: 1;
+  opacity: 1;
+  border: 1px solid gray;
+}
+
+.player-name-active {
+  position: relative;
+}
+.player-name-active:before {
+  content: "";
+  position: absolute;
+  background-color: yellow;
+  height: 3px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  border-radius: 20%;
+}
+
+.board {
+  background-color: rgb(35, 193, 241);
+  height: 100px;
+  width: 100px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board p {
+  margin: 0;
 }
 
 button {
-    opacity: 0.5;
+  opacity: 0.5;
+  background-color: rgb(177, 0, 0);
+  color: white;
+  padding: 10px 25px;
+  font-family: Helvetica, sans-serif;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  margin: 2px;
+  box-shadow: 1px 1px 10px 0.5px rgb(59, 59, 59);
 }
 
 .cardPlace {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.background-table {
+  background-image: url("./imgs/blackjack_background.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
