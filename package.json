@@ -1,0 +1,21 @@
+{
+  "name": "mini-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/etnomiur123/BlackJack-game.git"
+  },
+  "author": "Rui Monte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/etnomiur123/BlackJack-game/issues"
+  },
+  "homepage": "https://github.com/etnomiur123/BlackJack-game#readme"
+  
+}
+

@@ -11,11 +11,11 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="index.css">
-    <script src="app.js" defer></script>
+    <script type="module" src="./js/app.js" defer></script>
   </head>
   <body class="contain">
     <div class="row">
-      <div class="player1 col-6">
+      <div class="player1 col-4">
         <h2>Player 1</h2>
         <div class="board alert alert-danger">Score: <span class="score score-1">0</span></div>
         <div class="flex">
@@ -23,7 +23,8 @@
           <button type="button" class="btn btn-primary next-1 active">Stop</button>
         </div>
       </div>
-      <div class="player2 col-6">
+      <div class="cardPlace col-4"></div>
+      <div class="player2 col-4">
         <h2>Player 2</h2>
         <div class="board alert alert-danger">Score: <span class="score score-2">0</span></div>
         <div class="flex">

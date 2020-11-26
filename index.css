@@ -8,6 +8,8 @@
 
 .row {
     width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .flex {
@@ -33,5 +35,11 @@
 
 button {
     opacity: 0.5;
+}
+
+.cardPlace {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
